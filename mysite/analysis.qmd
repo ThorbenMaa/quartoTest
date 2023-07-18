@@ -1,0 +1,43 @@
+---
+title: "Analysis"
+---
+
+loadpackages and create data:
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+```
+
+plot results
+```{python}
+#| label: fig-circle
+#| fig-cap: "cool plot with circles"
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+In @fig-circle you can see cool circles
+
+Now we re-create the above plot without showing the actual code in the rendered file. However, there will be an option to show the code!
+
+```{python}
+#| code-fold: true
+#| label: fig-circle2
+#| fig-cap: "the same cool plot with circles"
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
