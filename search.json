@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quarto-tutorial",
+    "section": "",
+    "text": "Adding text\nIn this part, we will use quarto to display our project goals. In index.qmd, create an introduction where you will state:\nIn this project we aim to visualize the trends of the most frequently used babynames from 1880 to 2017 in the United States. We do this by:\n- Understanding the different columns of the data set\n- Find the top 10 most frequently used baby names in the data for:\n    - girls\n    - boys\n- Plot the yearly trend of the top 10 baby names"
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Analysis",
+    "section": "",
+    "text": "loadpackages and create data:\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\n\nplot results\n\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: cool plot with circles\n\n\n\n\nIn Figure 1 you can see cool circles\nNow we re-create the above plot without showing the actual code in the rendered file. However, there will be an option to show the code!\n\n\nCode\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 2: the same cool plot with circles"
+  }
+]
